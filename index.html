@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>E-GYAAN Faculty Information</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <style>
+
+.one {
+    background-image:"background.jpg";
+    padding: 120px 0;
+    position: relative;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+ .map-img {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    animation-name: mapMover;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all .4s ease;
+    transform-origin: center center; }
+
+
+@keyframes mapMover {
+  0% {
+    opacity: 0.05;
+    transform: translateY(-50%) translateX(0); }
+  50% {
+    opacity: 0.20;
+    transform: translateY(-55%) translateX(-20px); }
+  100% {
+    opacity: 0.05;
+    transform: translateY(-50%) translateX(0); } }
+
+
+
+
+   .block-title {
+    margin-bottom: 45px;
+  }
+
+
+   .first p {
+    margin: 0;
+    color: #777B92;
+    font-size: 24px;
+    line-height: 46px; }
+
+
+
+    .first h3 {
+    color: #273167;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0;
+    margin-top: 40px; }
+
+
+
+
+  .first .bx-wrapper {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    margin-bottom: 0;
+
+}
+
+
+
+
+    .first .bx-wrapper ul.slider {
+      padding: 0;
+      margin: 0;
+    }
+
+
+
+
+
+#testimonials-slider-pager {
+  width: 391px;
+  height: 391px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(39, 49, 103, 0.15);
+  border-radius: 50%;
+  position: relative;
+  animation-name: tesiMove;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition: all .4s ease;
+  transform-origin: center center; }
+
+
+@keyframes tesiMove {
+  0% {
+    transform: rotate(0deg); }
+  15% {
+    transform: rotate(2deg); }
+  33% {
+    transform: rotate(4deg); }
+  66% {
+    transform: rotate(2deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+
+
+
+  .pager-one .pager-item {
+    width: 71px;
+    height: 71px;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute; }
+
+
+    .pager-item:nth-child(1) {
+      top: 55px;
+      left: -10px; }
+
+  .pager-item:nth-child(2) {
+      top: 55px;
+      right: -10px; }
+
+    #testimonials-slider-pager .pager-one .pager-item:nth-child(3) {
+      bottom: 55px;
+      left: -10px; }
+    #testimonials-slider-pager .pager-one .pager-item:nth-child(4) {
+      bottom: 55px;
+      right: -10px; }
+    #testimonials-slider-pager .pager-one .pager-item:nth-child(5) {
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%); }
+
+
+    #testimonials-slider-pager .pager-one .pager-item:nth-child(6) {
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%); }
+
+
+    #testimonials-slider-pager .pager-one .pager-item > img {
+      width: 100%;
+      border-radius: 50%;
+      transition: all .4s ease; }
+
+
+    #testimonials-slider-pager .pager-one .pager-item.active img {
+      opacity: .75;
+      transform: scale(0.95); }
+
+
+  #testimonials-slider-pager .pager-two .pager-item {
+    width: 163px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: all .4s ease; }
+
+
+    #testimonials-slider-pager .pager-two .pager-item.active {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(0.95); }
+
+
+    #testimonials-slider-pager .pager-two .pager-item > img {
+      width: 100%;
+      border-radius: 50%; }
+
+
+        .bx-controls-direction{
+            position: absolute;
+            bottom: 25%;
+            font-size: 0px;
+        }
+
+        a.bx-next{
+            margin-left: 10px;
+            text-decoration: none;
+            color: gray;
+            cursor: pointer;
+            margin-top: 30px;
+
+        }
+
+
+        a.bx-prev{
+             cursor: pointer;
+            text-decoration: none;
+            color: gray;
+            margin-top: 30px;
+        }
+        .wrapper{
+          display:flex;
+        }
+        .wrapper .icon{
+          margin: 0 5px;
+          text-align: center;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          position: relative;
+          z-index: 2;
+          transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .wrapper .icon span{
+          display: block;
+          height: 60px;
+          width: 60px;
+          background: #fff;
+          border-radius: 50%;
+          position: relative;
+          z-index: 2;
+          box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+          transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .wrapper .icon span i{
+          line-height: 60px;
+          font-size: 25px;
+        }
+        .wrapper .icon .tooltip{
+          position: absolute;
+          top: 0;
+          z-index: 1;
+          background: #fff;
+          color: #fff;
+          padding: 10px 18px;
+          font-size: 20px;
+          font-weight: 500;
+          border-radius: 25px;
+          opacity: 0;
+          pointer-events: none;
+          box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+          transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .wrapper .icon:hover .tooltip{
+          top: -70px;
+          opacity: 1;
+          pointer-events: auto;
+        }
+        .icon .tooltip:before{
+          position: absolute;
+          content: "";
+          height: 15px;
+          width: 15px;
+          background: #fff;
+          left: 50%;
+          bottom: -6px;
+          transform: translateX(-50%) rotate(45deg);
+          transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .wrapper .icon:hover span{
+          color: #fff;
+        }
+        .wrapper .icon:hover span,
+        .wrapper .icon:hover .tooltip{
+          text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+        }
+        .wrapper .facebook:hover span,
+        .wrapper .facebook:hover .tooltip,
+        .wrapper .facebook:hover .tooltip:before{
+          background: #3B5999;
+        }
+        .wrapper .twitter:hover span,
+        .wrapper .twitter:hover .tooltip,
+        .wrapper .twitter:hover .tooltip:before{
+          background: #46C1F6;
+        }
+        .wrapper .instagram:hover span,
+        .wrapper .instagram:hover .tooltip,
+        .wrapper .instagram:hover .tooltip:before{
+          background: #e1306c;
+        }
+        .wrapper .github:hover span,
+        .wrapper .github:hover .tooltip,
+        .wrapper .github:hover .tooltip:before{
+          background: #333;
+        }
+        .wrapper .youtube:hover span,
+        .wrapper .youtube:hover .tooltip,
+        .wrapper .youtube:hover .tooltip:before{
+          background: #DE463B;
+        }
+    </style>
+
+</head>
+
+<body style="background:url(/images/cloud.jpg);background-size:100%;">
+
+
+
+           <section class="one">
+           <br><br><br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 d-flex">
+                        <div class="my-auto">
+
+                            <div id="testimonials-slider-pager">
+                                <div class="pager-one">
+                                    <a href="#" class="pager-item active" data-slide-index="0"><img src="/images/testi-1-1.jpg" /></a>
+                                    <a href="#" class="pager-item" data-slide-index="1"><img src="/images/testi-1-2.jpg" alt="Awesome Image" /></a>
+                                    <a href="#" class="pager-item" data-slide-index="2"><img src="/images/pf2.jpg" alt="Awesome Image" /></a>
+                                    <a href="#" class="pager-item" data-slide-index="3"><img src="/images/testi-1-4.jpg" alt="Awesome Image" /></a>
+                                    <a href="#" class="pager-item" data-slide-index="4"><img src="/images/testi-1-5.jpg" alt="Awesome Image" /></a>
+                                    <a href="#" class="pager-item" data-slide-index="5"><img src="/images/testi-1-6.jpg" alt="Awesome Image" /></a>
+                                </div><!-- /.testimonials-slider-pager-one -->
+                                <div class="pager-two">
+                                    <a href="#" class="pager-item active" data-slide-index="0"><img src="/images/testi-1-1.jpg" /></a>
+                                    <a href="#" class="pager-item" data-slide-index="1"><img src="/images/testi-1-2.jpg" /></a>
+                                    <a href="#" class="pager-item" data-slide-index="2"><img src="/images/pf2.jpg" alt="Awesome Image" /></a>
+                                    <a href="#" class="pager-item" data-slide-index="3"><img src="/images/testi-1-4.jpg" alt="Awesome Image" /></a>
+                                    <a href="#" class="pager-item" data-slide-index="4"><img src="/images/testi-1-5.jpg" alt="Awesome Image" /></a>
+                                    <a href="#" class="pager-item" data-slide-index="5"><img src="/images/testi-1-6.jpg" alt="Awesome Image" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="block-title ">
+                        </div>
+                        <ul class="slider testimonials-slider">
+                            <li class="slide-item">
+                                <div class="first">
+                                  <h2>Vinnie Smith[Sub:English]</h2>
+                                    <p>Educational Qualifications: B.ED,M.ED<br>
+                                       Total Teaching Experience: 6+ years<br>
+                                       Previous Work Places:BYJU'S and ZOHO<br>
+                                       Social Media Handles:</p>
+                                </div>
+                                <div class="wrapper">
+         <div class="icon facebook">
+            <div class="tooltip">
+               Facebook
+            </div>
+            <span><i class="fab fa-facebook-f"></i></span>
+         </div>
+         <div class="icon twitter">
+            <div class="tooltip">
+               Twitter
+            </div>
+            <span><i class="fab fa-twitter"></i></span>
+         </div>
+         <div class="icon instagram">
+            <div class="tooltip">
+               Instagram
+            </div>
+            <span><i class="fab fa-instagram"></i></span>
+         </div>
+         <div class="icon github">
+            <div class="tooltip">
+               Github
+            </div>
+            <span><i class="fab fa-github"></i></span>
+         </div>
+         <div class="icon youtube">
+            <div class="tooltip">
+               YouTube
+            </div>
+            <span><i class="fab fa-youtube"></i></span>
+         </div>
+                            </li>
+                            <li class="slide-item">
+                                <div class="first">
+                                    <h2>Rosy Hagans[Sub:Science]</h2>
+                                    <p>Educational Qualifications: B.ED,Bsc.MBG<br>
+                                       Total Teaching Experience: 10+ years<br>
+                                       Previous Work Places:NEET LECTURER<br>
+                                       Social Media Handles:</p>
+                                </div>
+                                <div class="wrapper">
+         <div class="icon facebook">
+            <div class="tooltip">
+               Facebook
+            </div>
+            <span><i class="fab fa-facebook-f"></i></span>
+         </div>
+         <div class="icon twitter">
+            <div class="tooltip">
+               Twitter
+            </div>
+            <span><i class="fab fa-twitter"></i></span>
+         </div>
+         <div class="icon instagram">
+            <div class="tooltip">
+               Instagram
+            </div>
+            <span><i class="fab fa-instagram"></i></span>
+         </div>
+         <div class="icon github">
+            <div class="tooltip">
+               Github
+            </div>
+            <span><i class="fab fa-github"></i></span>
+         </div>
+         <div class="icon youtube">
+            <div class="tooltip">
+               YouTube
+            </div>
+            <span><i class="fab fa-youtube"></i></span>
+         </div>
+                            </li>
+                            <li class="slide-item">
+                                <div class="first">
+                                  <h2>Peter Parker[Sub:Geography]</h2>
+                                  <p>Educational Qualifications: B.A,B.ED,M.ED<br>
+                                     Total Teaching Experience: 12+ years<br>
+                                     Previous Work Places:Geodotspatial INSTITUE
+                                     Social Media Handles:</p>
+                                </div>
+                                <div class="wrapper">
+         <div class="icon facebook">
+            <div class="tooltip">
+               Facebook
+            </div>
+            <span><i class="fab fa-facebook-f"></i></span>
+         </div>
+         <div class="icon twitter">
+            <div class="tooltip">
+               Twitter
+            </div>
+            <span><i class="fab fa-twitter"></i></span>
+         </div>
+         <div class="icon instagram">
+            <div class="tooltip">
+               Instagram
+            </div>
+            <span><i class="fab fa-instagram"></i></span>
+         </div>
+         <div class="icon github">
+            <div class="tooltip">
+               Github
+            </div>
+            <span><i class="fab fa-github"></i></span>
+         </div>
+         <div class="icon youtube">
+            <div class="tooltip">
+               YouTube
+            </div>
+            <span><i class="fab fa-youtube"></i></span>
+         </div>
+                            </li>
+                            <li class="slide-item">
+                                <div class="first">
+                                  <h2>Kevin Andrew[Sub:History]</h2>
+                                  <p>Educational Qualifications: B.A,M.ED<br>
+                                     Total Teaching Experience: 9+ years<br>
+                                     Previous Work Places:Winners Institute,ADI
+                                     Social Media Handles:</p>
+                                </div>
+                                <div class="wrapper">
+         <div class="icon facebook">
+            <div class="tooltip">
+               Facebook
+            </div>
+            <span><i class="fab fa-facebook-f"></i></span>
+         </div>
+         <div class="icon twitter">
+            <div class="tooltip">
+               Twitter
+            </div>
+            <span><i class="fab fa-twitter"></i></span>
+         </div>
+         <div class="icon instagram">
+            <div class="tooltip">
+               Instagram
+            </div>
+            <span><i class="fab fa-instagram"></i></span>
+         </div>
+         <div class="icon github">
+            <div class="tooltip">
+               Github
+            </div>
+            <span><i class="fab fa-github"></i></span>
+         </div>
+         <div class="icon youtube">
+            <div class="tooltip">
+               YouTube
+            </div>
+            <span><i class="fab fa-youtube"></i></span>
+         </div>
+                            </li>
+                            <li class="slide-item">
+                                <div class="first">
+                                  <h2>Zendaya[Sub:Languages]</h2>
+                                  <p>Educational Qualifications:B.SC(LIT),M.ed<br>
+                                     Total Teaching Experience: 4+ years<br>
+                                     Previous Work Places:VJTI Lecture Proffesor
+                                     Social Media Handles:</p>
+                                </div>
+                                <div class="wrapper">
+         <div class="icon facebook">
+            <div class="tooltip">
+               Facebook
+            </div>
+            <span><i class="fab fa-facebook-f"></i></span>
+         </div>
+         <div class="icon twitter">
+            <div class="tooltip">
+               Twitter
+            </div>
+            <span><i class="fab fa-twitter"></i></span>
+         </div>
+         <div class="icon instagram">
+            <div class="tooltip">
+               Instagram
+            </div>
+            <span><i class="fab fa-instagram"></i></span>
+         </div>
+         <div class="icon github">
+            <div class="tooltip">
+               Github
+            </div>
+            <span><i class="fab fa-github"></i></span>
+         </div>
+         <div class="icon youtube">
+            <div class="tooltip">
+               YouTube
+            </div>
+            <span><i class="fab fa-youtube"></i></span>
+         </div>
+                            </li>
+                            <li class="slide-item">
+                                <div class="first">
+                                    <h2>Harold Jane[Sub:Maths]</h2>
+                                    <p>Educational Qualifications: B.ED,Phd STATS<br>
+                                       Total Teaching Experience: 16+ years<br>
+                                       Previous Work Places:IIT,NIT,Winners Institue
+                                       Social Media Handles:</p>
+                                </div>
+                                <div class="wrapper">
+         <div class="icon facebook">
+            <div class="tooltip">
+               Facebook
+            </div>
+            <span><i class="fab fa-facebook-f"></i></span>
+         </div>
+         <div class="icon twitter">
+            <div class="tooltip">
+               Twitter
+            </div>
+            <span><i class="fab fa-twitter"></i></span>
+         </div>
+         <div class="icon instagram">
+            <div class="tooltip">
+               Instagram
+            </div>
+            <span><i class="fab fa-instagram"></i></span>
+         </div>
+         <div class="icon github">
+            <div class="tooltip">
+               Github
+            </div>
+            <span><i class="fab fa-github"></i></span>
+         </div>
+         <div class="icon youtube">
+            <div class="tooltip">
+               YouTube
+            </div>
+            <span><i class="fab fa-youtube"></i></span>
+         </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"></script>
+
+    <script>
+
+    (function($) {
+
+    function thmbxSlider() {
+        if ($('.testimonials-slider').length) {
+            $('.testimonials-slider').bxSlider({
+                // adaptiveHeight: true,
+                auto: true,
+                controls: true,
+                pause: 50000,
+                speed: 100,
+                pager: true,
+                pagerCustom: '.pager-one, .pager-two'
+            });
+        }
+    }
+
+
+    $(window).on('load', function() {
+
+        thmbxSlider();
+    });
+
+})(jQuery);
+    </script>
+</body>
+
+
+</html>
